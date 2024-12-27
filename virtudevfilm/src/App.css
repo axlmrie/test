@@ -1,0 +1,260 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  color: white;
+  z-index: 2;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  z-index: 2;
+
+}
+
+@media only screen and (max-width : 600px){
+  .playerDiv{
+    width: 90vw;
+    height: 60vh;
+  }
+}
+
+
+.li-style:hover {
+  background-color: #f9b17a; /* Change this color as needed */
+}
+
+.headerEpisode {
+  display : flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #00000060;
+  width: 100vw;
+
+}
+.titre{
+  font-size: larger;
+  font-weight: bold;
+}
+.login-container {
+  max-height: 100vh;
+  position: relative;
+  z-index: 2;
+  margin-left: auto;
+  margin-right: auto;
+  top: 100px;
+  width: fit-content;
+  height: "fit-content";
+  background: #2d3250;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  background-color:rgba(0, 0, 0, 0.6);
+  z-index: 1; /* s'assurer que la vidéo est derrière le contenu */
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+#affiche {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Ajoute un espacement entre les éléments */
+}
+
+.film-container {
+  position: relative;
+  display: inline-block;
+}
+
+.film-link {
+  position: relative;
+  display: block;
+}
+
+.film-image {
+  display: block;
+}
+
+
+h1{
+  margin-left: 3vw;
+  text-align: left;
+}
+
+hr{
+  width: 95vw;
+}
+
+.film-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Transparence par défaut */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Caché par défaut */
+  transition: opacity 0.3s ease, background-color 0.3s ease; /* Transition douce */
+}
+
+.film-link:hover .film-overlay {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.7); /* Affichage lors du survol */
+}
+
+.film-title, .film-duration {
+  margin: 0;
+  font-weight: bold;
+}
+
+.form-group-password{
+  color: aliceblue;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+
+.mui-btn{
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
+
+.video-player {
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-self: center;
+  width: 30vw;
+  height: 30vh;
+  background-color: black; /* Ajoute un fond noir pour l'effet vidéo */
+  border-radius: 20px; /* Ajoute des coins arrondis */
+  overflow: visible; /* Assure que tout débordement reste à l'intérieur du conteneur */
+}
+
+
+@media (max-width:600px) {
+  .video-player{
+    width: 90vw;
+    height: 35vh;
+  }
+}
+
+.btnLogin{
+  margin-top: 10px;
+}
+
+.formulaireAjout{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.formulaireAjout  div{
+  margin-top: 10px;
+}
+
+
+.controls {
+  background-color: rgba(0, 0, 0, 0.3); /* Utilise une couleur avec un peu de transparence */
+  position: absolute;
+  bottom: 0; /* Place les contrôles tout en bas de la vidéo */
+  height: auto; /* Ajuste la hauteur en fonction du contenu */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0 0 20px 20px;
+}
+
+.duration {
+  font-size: medium;
+  width: 100%;
+  height: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.duration > span {
+  flex-shrink: 0; /* Le texte garde sa taille fixe */
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+.bottomControls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+  margin-left: 30px;
+  margin-right: 30px; /* Ajoute un espace au-dessus des contrôles du bas */
+}
+
+.gauche,.droite{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.droite{
+  justify-content: flex-end;
+}
+.bottomControls button,
+.bottomControls select,
+.bottomControls input {
+  margin: 0 10px;
+  padding: 5px;
+}
+
+button {
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-group{
+  margin-top: 20px;
+  color: aliceblue;
+}
+.MuiChip-label{
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}

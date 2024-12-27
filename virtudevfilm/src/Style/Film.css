@@ -1,0 +1,24 @@
+#infoFilmStyle{
+    display: flex;
+}
+#listeGenre{
+    display: flex;
+    margin: 0;
+    padding: 0%;
+}
+#listeGenre>li{
+    padding-right: 2%;
+}
+#titreFilm{
+    text-align: center;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+#left{
+    margin-left: 5%;
+}
+#right{
+    margin-left: 5px;
+    text-align: left;
+}
